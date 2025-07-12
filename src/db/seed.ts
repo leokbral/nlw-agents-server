@@ -1,6 +1,7 @@
 import { reset, seed } from 'drizzle-seed';
 import { db, sql } from './connection.ts';
 import { schema } from './schema/index.ts';
+import { questions } from './schema/questions.ts';
 
 await reset(db, schema);
 await seed(db, schema).refine(f => {
@@ -11,9 +12,13 @@ await seed(db, schema).refine(f => {
                 name: f.companyName(),
                 description: f.loremIpsum(),
             }
+        },
+        questions: {
+            count: 20,
         }
     }
 });
+
 await sql.end();
 
 //biome-ignore lint/suspicious/noConsole: only used in dev
