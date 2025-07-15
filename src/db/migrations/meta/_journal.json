@@ -15,6 +15,13 @@
       "when": 1752096633204,
       "tag": "0001_steep_bill_hollister",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752505109611,
+      "tag": "0002_flowery_wendell_rand",
+      "breakpoints": true
     }
   ]
 }
